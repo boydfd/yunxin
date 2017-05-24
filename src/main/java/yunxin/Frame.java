@@ -15,7 +15,8 @@ import java.util.Date;
 import java.util.List;
 
 class Frame {
-    static JSONObject request(String url, String contentType, List<NameValuePair> parameters) throws IOException {
+    static JSONObject request(String url, List<NameValuePair> parameters) throws IOException {
+        String contentType = "application/x-www-form-urlencoded;charset=utf-8";
         HttpClient httpClient = HttpClientBuilder.create().build();
         String fullUrl = "https://api.netease.im/nimserver/".concat(url);
         HttpPost httpPost = new HttpPost(fullUrl);
