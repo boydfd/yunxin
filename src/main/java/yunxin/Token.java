@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Token {
-    public JSONObject getToken() throws IOException {
+    public JSONObject getToken(final String accountId) throws IOException {
         String contentType = "application/x-www-form-urlencoded;charset=utf-8";
         String url = "user/refreshToken.action";
         List<NameValuePair> parameters = new ArrayList<NameValuePair>(){{
-            add(new BasicNameValuePair("accid", "boydfd"));
+            add(new BasicNameValuePair("accid", accountId));
         }};
         return Frame.request(url, contentType, parameters);
     }

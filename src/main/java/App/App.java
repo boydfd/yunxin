@@ -13,7 +13,7 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         Token yunToken = new Token();
-        JSONObject token = yunToken.getToken();
+        JSONObject token = yunToken.getToken("boydfd");
         System.out.println(token);
     }
 }
