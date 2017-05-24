@@ -9,7 +9,7 @@ public class TokenTest {
     @Test
     public void shouldReturnToken() throws Exception {
         Token yunToken = new Token();
-        JSONObject token =  new JSONObject(yunToken.getToken());
+        JSONObject token =  yunToken.getToken();
         assertEquals(200, token.get("code"));
     }
 }

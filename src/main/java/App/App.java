@@ -1,5 +1,6 @@
 package App;
 
+import org.json.JSONObject;
 import yunxin.Token;
 
 /*
@@ -12,7 +13,7 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         Token yunToken = new Token();
-        String token = yunToken.getToken();
+        JSONObject token = yunToken.getToken();
         System.out.println(token);
     }
 }
